@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Subreddit Scores</title>
+       <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.js'></script>
+        
+    </head>
+    <body>
+        <script type="text/javascript">
+        //request the info from subreddits.json
+        d3.json("subreddits.json", function(error, subreddits) {
+            //create array for all subreddit scores
+            var subredditScores = []
+            subreddits.forEach(function(subreddit){
+                subredditScores.push(subreddit.sum)
+                console.log(subredditScores)
+            })
+            //set the width, height, and barpadding variables
+            var w = 500;
+            var h = 100;
+            var barPadding = 1;
+            //create our SVG element
+            var svg = d3.select("body")
+                .append("svg")
+                .attr("width", w)
+                .attr("height", h);
+
+            //generate rects and add them to SVG
+            svg.selectAll("rect")
+                .data(subredditScores)
+                .enter()
+                .append("rect")
+
+            //fix the bars from overlapping on each other
+            //assign a dynamic value that corresponds to i
+                .attr("x", function (d, i) {
+                    return i + (w / subredditScores.length)
+                })
+                .attr("y", function (d){
+                    return h - (d*4) //makes the bar grow from the bottom instead of top
+                })
+                .attr("width", w / subredditScores.length - barPadding)
+                .attr("height", function (d){
+                    return Math.abs(d) + "px"
+                }) 
+                .attr("fill", function (d){
+                    return "rgb(0,0,0)"
+                })
+
+            //add labels
+            svg.selectAll("text")
+                .data(subredditScores)
+                .enter()
+                .append("text")
+                .text(function (d){
+                    return d
+                })
+                .attr("text-anchor", "middle")
+                .attr("x", function (d, i) {
+                    return i * (w / subredditScores.length) + (w / subredditScores.length - barPadding) / 2;
+                })
+                .attr("y", function (d) {
+                    return h - (d * 4) + 15
+                })
+                .attr("font-family","sans-serif")
+                .attr("font-size","11px")
+                .attr("fill", "white")
+            })
+        </script>
+    </body>
+</html> 
+
+

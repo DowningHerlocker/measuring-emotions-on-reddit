@@ -1,0 +1,12 @@
+div.positive {
+	display:inline-block;
+	width: 40px;
+	background-color: blue;
+	margin-right: 2px;
+}
+div.negative {
+	display:inline-block;
+	width: 40px;
+	background-color: red;
+	margin-right: 2px;
+}
