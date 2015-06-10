@@ -2,12 +2,11 @@ var request = require('request')
 var queue = require('queue-async')
 var sentiment = require('sentiment')
 
-var topSubreddits = ['funny' ,'AskReddit','pics','todayilearned','worldnews']
-//,'science','IAmA' ,'blog' ,'videos','gaming' ,'movies','Music' ,'aww' ,'news' ,'gifs' ,'askscience','explainlikeimfive' ,'technology' ,'EarthPorn','books' ,'bestof' ,'television' ,'WTF' ,'AdviceAnimals','LifeProTips' ,'sports','mildlyinteresting','DIY' ,'Fitness','Showerthoughts' ,'space' ,'tifu' ,'Jokes','food' ,'photoshopbattles' ,'InternetIsBeautiful' ,'GetMotivated','history','gadgets','nottheonion','dataisbeautiful','Futurology','Documentaries','listentothis','personalfinance','philosophy','politics' ,'nosleep','Art' ,'OldSchoolCool' ,'creepy' ,'UpliftingNews','WritingPrompts','TwoXChromosomes','atheism' ,'woahdude','trees','leagueoflegends','4chan','programming','Games','fffffffuuuuuuuuuuuu','sex','Android','reactiongifs','gameofthrones','cringepics','malefashionadvice','Frugal','YouShouldKnow','interestingasfuck','HistoryPorn','pokemon','Minecraft','AskHistorians','lifehacks','pcmasterrace','tattoos','Unexpected','JusticePorn','nfl','BlackPeopleTwitter','FoodPorn','facepalm','europe','soccer','wheredidthesodago','cringe','TrueReddit','gentlemanboners','oddlysatisfying','freebies','wallpapers','relationships','GameDeals','offbeat','conspiracy','humor' ,'Cooking']
-
+var topSubreddits = ['funny','AskReddit','pics','todayilearned','worldnews','science','IAmA' ,'blog','videos','gaming','movies','Music','aww','news' ,'gifs','askscience','explainlikeimfive' ,'technology','EarthPorn','books','bestof','television','WTF','AdviceAnimals','LifeProTips','sports','mildlyinteresting','DIY' ,'Fitness','Showerthoughts','space' ,'tifu','Jokes','food' ,'photoshopbattles','InternetIsBeautiful','GetMotivated','history','gadgets','nottheonion','dataisbeautiful','Futurology','Documentaries','listentothis','personalfinance','philosophy','politics' ,'nosleep','Art' ,'OldSchoolCool']// ,'creepy' ,'UpliftingNews','WritingPrompts','TwoXChromosomes','atheism' ,'woahdude','trees','leagueoflegends','4chan','programming','Games','fffffffuuuuuuuuuuuu','sex','Android','reactiongifs','gameofthrones','cringepics','alefashionadvice','Frugal','YouShouldKnow','interestingasfuck','HistoryPorn','pokemon','Minecraft','AskHistorians','lifehacks','pcmasterrace','tattoos','Unexpected','JusticePorn','nfl','BlackPeopleTwitter','FoodPorn','facepalm','europe','soccer','wheredidthesodago','cringe','TrueReddit','gentlemanboners','oddlysatisfying','freebies','wallpapers','relationships','GameDeals','offbeat','conspiracy','humor' ,'Cooking']
 var q = queue(1)
 topSubreddits.forEach(function(topSubreddit) {
     q.defer(function(sub,done){
+        try {
         request('http://www.reddit.com/r/'+ topSubreddit +'.json', function (error, response, body) {
             var subResponse= JSON.parse(body)
             var posts= subResponse.data.children
@@ -30,6 +29,10 @@ topSubreddits.forEach(function(topSubreddit) {
             }
             done(null, subData)
         })
+    }
+    catch(error){
+        console.log(error)
+    }
     }, topSubreddit)    
 })
 

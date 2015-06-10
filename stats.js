@@ -1,5 +1,5 @@
 var fs= require('fs')
-var subreddits= JSON.parse(fs.readFileSync('data2.json', 'utf8'))
+var subreddits= JSON.parse(fs.readFileSync('newdata.json', 'utf8'))
 
 subreddits.forEach(function(subreddit) {
 	subreddit.posts.forEach(function(post){
