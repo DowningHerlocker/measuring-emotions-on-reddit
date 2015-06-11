@@ -36,11 +36,11 @@ Post: "We're the Google Flights team, makers of flight search related stuff. Ask
 
 This post in particular had 329 total comments, which I easily found from parsing the API. Of the 329 comments, there were some negative comments, such as:
  	
- 	["Why did you eliminate the list view of flights? The graphic map might be neat to look at but it is a time waster for business travelers. You lost my business." Score: -3]
+ 	["Why did you eliminate the list view of flights? The graphic map might be neat to look at but it is a time waster for business travelers. You lost my business." ###Score: -3]
 
  and many positive comments, such as:
 
- 	["First. I'd like to say thank you for making an amazing tool which works so well and fluidly. I often go on it for fun to see where I could go with 'x' amount of money. \n\nI was wondering if there will be any chance of being able to compare flights by area or region. For example, I live in NW England and I have about 3 nearby international airports and it'd be great to be able to say all airports in England or list several airports. \n\nAnd also, what would need to be done for Google to analyse patterns and try to predict when the cheapest flight will be available for booking for going on a certain date? \n\nKeep up the amazing work you do! Your amazing tool meant I could go on holiday this summer because I could see where was cheapest to fly to. Literally, you have made my summer. " Score: 26]
+ 	["First. I'd like to say thank you for making an amazing tool which works so well and fluidly. I often go on it for fun to see where I could go with 'x' amount of money. I was wondering if there will be any chance of being able to compare flights by area or region. For example, I live in NW England and I have about 3 nearby international airports and it'd be great to be able to say all airports in England or list several airports. And also, what would need to be done for Google to analyse patterns and try to predict when the cheapest flight will be available for booking for going on a certain date? Keep up the amazing work you do! Your amazing tool meant I could go on holiday this summer because I could see where was cheapest to fly to. Literally, you have made my summer. " ###Score: 26]
 
  ]
 
