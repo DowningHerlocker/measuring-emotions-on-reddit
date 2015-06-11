@@ -1,50 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Subreddit Scores</title>
-       <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.js'></script>
-       <link rel="stylesheet" type="text/css" href="stylesheet.css">
-        
-    </head>
-    <body>
-        <script type="text/javascript">
-        
-        d3.json("subreddits.json", function (error, subreddits) {
-            var subredditScores = []
-            subreddits.forEach(function(subreddit){
-              subredditScores.push(subreddit.sum)
-              console.log(subredditScores)
-            })
-            subreddits= subreddits.sort(function (a,b){
-              return a.sum - b.sum
-            })
+<meta charset="utf-8">
+<title> Subreddit Scores </title>
+<style>
 
-            
-            d3.select("body").selectAll("div")
-                .data(subredditScores)
-                .enter()
-                .append("div")
-                .attr("class", function (d) {
-                    if (d < 0) {
-                        return "negative"
-                    } else {
-                        return "positive"
-                }
-              })
-                .style("height", function(d) {
-                      var barHeight = Math.abs(d) / 5
-                      return barHeight + "px";
-                  })
-                .text(function (d){
-                  return d;
-                })
-                .text(function (d){
-                  return d.subreddit
-                })
-            })
-        </script>
-    </body>
-</html> 
+body {
+  font: 5px sans-serif;
+
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.bar:hover {
+  fill: yellow ;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+</style>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script>
+
+var margin = {top: 40, right: 20, bottom: 30, left: 40},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+//var formatPercent = d3.format(".0%");
+
+var x = d3.scale.ordinal()
+    .rangeRoundBands([0, width], .1);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+    //.tickFormat(formatPercent);
+
+var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return d.subreddit  + " <strong>:</strong> <span style='color:red'>" + d.sum + "</span>";
+  })
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+svg.call(tip);
+
+d3.json("subreddits.json", function (error, subreddits) {
+  x.domain(subreddits.map(function(d) { return d.subreddit; }));
+  y.domain([0, d3.max(subreddits, function(d) { return d.sum; })]);
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Sum Sentiment Score");
 
 
+  svg.selectAll(".bar")
+      .data(subreddits)
+    .enter().append("rect")
+      .attr("class", "bar")
+      .attr("x", function(d) { return x(d.subreddit); })
+      .attr("width", x.rangeBand())
+      .attr("y", function(d) { return y(d.sum); })
+      .attr("height", function(d) { return height - y(d.sum); })
+      .on('mouseover', tip.show)
+      .on('mouseout', tip.hide)
+
+});
+
+function type(d) {
+  d.sum = +d.susubm;
+  return d;
+}
+
+</script>
