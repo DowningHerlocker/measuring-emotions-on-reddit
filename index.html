@@ -4,7 +4,7 @@
 <style>
 
 body {
-  font: 5px sans-serif;
+  font: 10px sans-serif;
 
 }
 
@@ -14,17 +14,23 @@ body {
   stroke: #000;
   shape-rendering: crispEdges;
 }
-
-.bar {
+.bar.negative {
+  fill: red;
+}
+.bar.positive {
   fill: steelblue;
 }
 
-.bar:hover {
+
+.bar.positive:hover {
   fill: yellow ;
 }
 
+.bar.negative: hover {
+  fill: yellow;
+}
 .x.axis path {
-  display: none;
+  display: line;
 }
 
 .d3-tip {
@@ -61,26 +67,19 @@ body {
 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 <script>
 
-var margin = {top: 40, right: 20, bottom: 30, left: 40},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
-
+var w = 520;
+var h = 500;
+var padding = 25;
 //var formatPercent = d3.format(".0%");
 
-var x = d3.scale.ordinal()
-    .rangeRoundBands([0, width], .1);
-
-var y = d3.scale.linear()
-    .range([height, 0]);
-
-var xAxis = d3.svg.axis()
+/*var xAxis = d3.svg.axis()
     .scale(x)
     .orient("bottom");
 
-var yAxis = d3.svg.axis()
+//var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
-    //.tickFormat(formatPercent);
+    //.tickFormat(formatPercent); */
 
 var tip = d3.tip()
   .attr('class', 'd3-tip')
@@ -90,49 +89,50 @@ var tip = d3.tip()
   })
 
 var svg = d3.select("body").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("width", w + padding + padding)
+    .attr("height", h + padding + padding)
   .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform", "translate(" + padding + "," + padding+ ")");
 
 svg.call(tip);
 
 d3.json("subreddits.json", function (error, subreddits) {
-  x.domain(subreddits.map(function(d) { return d.subreddit; }));
-  y.domain([0, d3.max(subreddits, function(d) { return d.sum; })]);
+  subreddits = subreddits.sort (function (a, b){
+    return a.sum - b.sum
+  })
+  var xScale = d3.scale.ordinal()
+    .domain(subreddits.map(function(d) { 
+      return d.subreddit;
+    }))
+    .rangeRoundBands([0, w], .1);
 
-  svg.append("g")
-      .attr("class", "x axis")
-      .attr("transform", "translate(0," + height + ")")
-      .call(xAxis);
+  var yScale = d3.scale.linear()
+    .domain(d3.extent(subreddits, function(d){
+      return d.sum;
+    }))
+    .range([w+padding,padding]);
 
-  svg.append("g")
-      .attr("class", "y axis")
-      .call(yAxis)
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", ".71em")
-      .style("text-anchor", "end")
-      .text("Sum Sentiment Score");
-
-
+//deleted axes 
+//create barchart 
   svg.selectAll(".bar")
       .data(subreddits)
     .enter().append("rect")
-      .attr("class", "bar")
-      .attr("x", function(d) { return x(d.subreddit); })
-      .attr("width", x.rangeBand())
-      .attr("y", function(d) { return y(d.sum); })
-      .attr("height", function(d) { return height - y(d.sum); })
+      .attr("class", function (d) {
+        return d.sum < 0 ? " bar negative" : "bar positive";
+      })
+      .attr("x", function (d) { 
+        return xScale(d.subreddit)/2; 
+      })
+      .attr("y", function(d) { 
+        return yScale(Math.max(0, d.sum)); 
+      })
+      .attr("width", xScale.rangeBand()/2)
+      .attr("height", function(d) { 
+        return Math.abs(yScale(d.sum) - yScale(0)); 
+      })
       .on('mouseover', tip.show)
       .on('mouseout', tip.hide)
 
+
 });
-
-function type(d) {
-  d.sum = +d.susubm;
-  return d;
-}
-
 </script>
