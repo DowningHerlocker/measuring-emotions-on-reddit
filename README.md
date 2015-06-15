@@ -21,9 +21,10 @@ I parsed the API, taking out the relevant information needed for my analysis. He
 
 With my new easy to navigate json, I ran a sentiment analysis test on all of the comments of each post on each subreddit. Sentiment is a Node.js modulue that uses a preset worldlist, where each block of test is scored based on the negative or positive value of each word. Below is an example of how the sentiment analysis works:
 
-['I love puppies so much. They're just the best! -Score: 12]
-[I can't believe I am graduating college today. I am going to miss my friends. -Score: 2]
-
+```
+'I love puppies so much. They're just the best!' -Score: 12]
+'I can't believe I am graduating college today. I am going to miss my friends.' -Score: 2]
+```
 Sometimes, the sentiment scores can be off, due to sentiment's failure to understand context, as seen below:
 
 [This puppy is so damn cute. I might squeeze it to death. -Score: -4]
