@@ -14,19 +14,23 @@ Reddit, is more than just a place to get updated on worldnews, look at cute pict
 I parsed the API, taking out the relevant information needed for my analysis. Here is a sample of my cleaned-up json:
 
 <div align="left">
-        <img width="65%" src="img/cleanjson.jpg" alt="clean json" title="clean json"</img>
+        <img width="65%" src="img/cleanjson.png" alt="clean json" title="clean json"</img>
         <img height="2" width="10px">
 </div>
 
 
 With my new easy to navigate json, I ran a sentiment analysis test on all of the comments of each post on each subreddit. Sentiment is a Node.js modulue that uses a preset worldlist, where each block of test is scored based on the negative or positive value of each word. Below is an example of how the sentiment analysis works:
 
-['I love puppies so much. They're just the best! -Score: 12]
-[I can't believe I am graduating college today. I am going to miss my friends. -Score: 2]
-
+```
+"You're dad is adorable and I want to adopt him." -Score: 5
+"It is incredible how many idiots are around us. Reddit is an idiot magnet" -Score: -3
+```
 Sometimes, the sentiment scores can be off, due to sentiment's failure to understand context, as seen below:
 
-[This puppy is so damn cute. I might squeeze it to death. -Score: -4]
+```
+"You cheeky bastard. Lemme get your number." -Score: -5
+```
+
 
 However, by examining thousands of comments, the sum score pretty much averages out. 
 
@@ -53,12 +57,7 @@ This post in particular had 329 total comments, which I easily found from parsin
 
  
 
-In contrast to the subreddit "IAmA", the subreddit with the lowest sum sentiment score was "news". Shocking! :) The post with the comment that had the lowest sum sentiment score is shown below: 
-
-[Subreddit: News
-Post: Defense with Dignity: How the Dignity of Violent Resistance Informs the Gun Rights Debate]
-
-The first comment on this post had a score of -60! I'll spare you of posting the two page long comment itself, but here is a little snippet of negativity from it for you: 
+In contrast to the subreddit "IAmA", the subreddit with the lowest sum sentiment score was "AskReddit" 
 
 []
 
