@@ -5,12 +5,10 @@ In order to analyze human emotion in social networks, I used sentiment analysis 
 
 Reddit, is more than just a place to get updated on worldnews, look at cute pictures of puppies, and hear about the latest edition of world of warcraft. Reddit has become a community where millions of people gather every day to view and post their thoughts, opinions, and views on thousands of different topics. Reddit is great because it's public API allows access to lots of useful data just by adding ".json" to the end of the post's url. However, as you can see below, the API is somewhat hard to navigate. 
 
-```
 <div align="left">
         <img width="65%" src="img/MessyJson.jpg" alt="reddit json" title="reddit json"</img>
         <img height="2" width="10px">
 </div>
-```
 
 I parsed the API, taking out the relevant information needed for my analysis. Here is a sample of my cleaned-up json:
 
