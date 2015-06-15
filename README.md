@@ -53,12 +53,7 @@ This post in particular had 329 total comments, which I easily found from parsin
 
  
 
-In contrast to the subreddit "IAmA", the subreddit with the lowest sum sentiment score was "news". Shocking! :) The post with the comment that had the lowest sum sentiment score is shown below: 
-
-[Subreddit: News
-Post: Defense with Dignity: How the Dignity of Violent Resistance Informs the Gun Rights Debate]
-
-The first comment on this post had a score of -60! I'll spare you of posting the two page long comment itself, but here is a little snippet of negativity from it for you: 
+In contrast to the subreddit "IAmA", the subreddit with the lowest sum sentiment score was "AskReddit" 
 
 []
 
