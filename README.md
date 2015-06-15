@@ -44,8 +44,9 @@ This graph shows the sum sentiment scores of the top 50 subreddits from negative
 
 As you can see, the subreddit "IAmA" has the highest sum sentiment scores. With the "IAmA" subreddit, users post what they do in life, and people can comment, ask questions, ect. Let's look at a few posts in this subreddit to see what sentiment analysis found. 
 
-*Subreddit: I Am A*
-*Post:* "We're the Google Flights team, makers of flight search related stuff. Ask us anything!"]
+**Subreddit: I Am A**
+
+*Post:* "We're the Google Flights team, makers of flight search related stuff. Ask us anything!"
 
 This post in particular had 329 total comments, which I easily found from parsing the API. Of the 329 comments, there were some negative comments, such as:
  	
