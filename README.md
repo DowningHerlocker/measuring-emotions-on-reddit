@@ -10,9 +10,14 @@ Reddit, is more than just a place to get updated on worldnews, look at cute pict
         <img height="2" width="10px">
 </div>
 
+
 I parsed the API, taking out the relevant information needed for my analysis. Here is a sample of my cleaned-up json:
 
-[picture of my pretty json]
+<div align="left">
+        <img width="65%" src="img/cleanjson.jpg" alt="clean json" title="clean json"</img>
+        <img height="2" width="10px">
+</div>
+
 
 With my new easy to navigate json, I ran a sentiment analysis test on all of the comments of each post on each subreddit. Sentiment is a Node.js modulue that uses a preset worldlist, where each block of test is scored based on the negative or positive value of each word. Below is an example of how the sentiment analysis works:
 
