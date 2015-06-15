@@ -38,7 +38,7 @@ Aside from the easy to access API, I chose to anaylyze reddit because it covers 
 This graph shows the sum sentiment scores of the top 50 subreddits from negative to positive. 
 
 <div align="left">
-        <img width="65%" src="subscores.png" alt="subscores" title="subscores"</img>
+        <img width="65%" src="img/subscores.png" alt="subscores" title="subscores"</img>
         <img height="2" width="10px">
 </div>
 
