@@ -48,9 +48,8 @@ As you can see, the subreddit "IAmA" has the highest sum sentiment scores. With 
 Post: "We're the Google Flights team, makers of flight search related stuff. Ask us anything!"]
 
 This post in particular had 329 total comments, which I easily found from parsing the API. Of the 329 comments, there were some negative comments, such as:
- ```	
- "Why did you eliminate the list view of flights? The graphic map might be neat to look at but it is a time waster for business travelers. You lost my business." -Score: -3
- ```
+ 	
+ ```"Why did you eliminate the list view of flights? The graphic map might be neat to look at but it is a time waster for business travelers. You lost my business." -Score: -3```
 
  and many positive comments, such as:
 
