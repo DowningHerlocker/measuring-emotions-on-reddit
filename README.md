@@ -31,16 +31,16 @@ Sometimes, the sentiment scores can be off, due to sentiment's failure to unders
 "You cheeky bastard. Lemme get your number." -Score: -5
 ```
 
-
 However, by examining thousands of comments, the sum score pretty much averages out. 
 
-Aside from the easy to access API, I chose to anaylyze reddit because it covers such a broad range of topics, and is utilized by such a wide range of people. I performed the analysis on the top 50 subreddits. Below, you can see that the top 15 subreddits alone cover material of all types. 
-
-[picture of top 15 subreddits]
+Aside from the easy to access API, I chose to anaylyze reddit because it covers such a broad range of topics, and is utilized by such a wide range of people. I performed the analysis on the top 50 subreddits. 
 
 This graph shows the sum sentiment scores of the top 50 subreddits from negative to positive. 
 
-[picture of all 50 subreddit scores]
+<div align="left">
+        <img width="65%" src="subscores.png" alt="subscores" title="subscores"</img>
+        <img height="2" width="10px">
+</div>
 
 As you can see, the subreddit "IAmA" has the highest sum sentiment scores. With the "IAmA" subreddit, users post what they do in life, and people can comment, ask questions, ect. Let's look at a few posts in this subreddit to see what sentiment analysis found. 
 
