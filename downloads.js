@@ -5,14 +5,13 @@ var sentiment = require('sentiment')
 var topSubreddits = ['funny','AskReddit','pics','todayilearned','worldnews','science','IAmA' ,'blog','videos','gaming','movies','Music','aww','news' ,'gifs','askscience','explainlikeimfive' ,
 'technology','EarthPorn','books','bestof','television','WTF','AdviceAnimals','LifeProTips','sports','mildlyinteresting','DIY' ,'Fitness','Showerthoughts','space' ,'tifu','Jokes',
 'food' ,'photoshopbattles','InternetIsBeautiful','GetMotivated','history','gadgets','nottheonion','dataisbeautiful','Futurology','Documentaries','listentothis','personalfinance',
-'philosophy','politics' ,'nosleep','Art']/* ,'OldSchoolCool','creepy','UpliftingNews','WritingPrompts','TwoXChromosomes','atheism' ,'woahdude','trees','leagueoflegends','4chan',
+'philosophy','politics' ,'nosleep','Art' ,'OldSchoolCool']/*'creepy','UpliftingNews','WritingPrompts','TwoXChromosomes','atheism' ,'woahdude','trees','leagueoflegends','4chan',
 'programming','Games','fffffffuuuuuuuuuuuu','sex','Android','reactiongifs','gameofthrones','cringepics','alefashionadvice','Frugal','YouShouldKnow','interestingasfuck','HistoryPorn',
 'pokemon','Minecraft','AskHistorians','lifehacks','pcmasterrace','tattoos','Unexpected','JusticePorn','nfl','BlackPeopleTwitter','FoodPorn','facepalm','europe','soccer',
 'wheredidthesodago','cringe','TrueReddit','gentlemanboners','oddlysatisfying','freebies','wallpapers','relationships','GameDeals','offbeat','conspiracy','humor' ,'Cooking'] */
 var q = queue(1)
 topSubreddits.forEach(function(topSubreddit) {
     q.defer(function(sub,done){
-        try {
         request('http://www.reddit.com/r/'+ topSubreddit +'.json', function (error, response, body) {
             var subResponse= JSON.parse(body)
             var posts= subResponse.data.children
@@ -34,11 +33,7 @@ topSubreddits.forEach(function(topSubreddit) {
                 posts: postsData
             }
             done(null, subData)
-        })
-    }
-    catch(error){
-        console.log(error)
-    }
+     })
     }, topSubreddit)    
 })
 
@@ -53,11 +48,11 @@ q.awaitAll(function(errors,subreddits){
                     if (!err && response.statusCode == 200) {
                         var comments = JSON.parse(body)[1].data.children
                         comments.forEach(function(comment){
-                        	var commentData= {
-                        		text: comment.data.body,
-                        		score: sentiment(comment.data.body).score
-                        	}
-                        	post.comments.push(commentData)
+                            var commentData= {
+                                text: comment.data.body,
+                                score: sentiment(comment.data.body).score
+                            }
+                            post.comments.push(commentData)
                         })
                         setTimeout(function(){
                             done(null, comments)    
@@ -70,7 +65,6 @@ q.awaitAll(function(errors,subreddits){
         })
     })
     qComments.awaitAll(function(errors, responses){
-    	console.log(JSON.stringify(subreddits))
+        console.log(JSON.stringify(subreddits))
     })
 })
-
