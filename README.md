@@ -74,6 +74,17 @@ In contrast to the subreddit "IAmA", the subreddit with the lowest sum sentiment
 
 ```"No, I'm not the government." Score: -1 ```
 
+Another extremely negative subreddit was "News". Shocking! Here are a couple comments from this subreddit:
+
+**Subreddit:** News
+
+**Post:** "Texas police shut down girls' lemonade stand, demand permit"
+
+```"Wait, they made $25 in an hour? nWell fuck my job I'm gonna go sell some juice."```
+
+**Post:** "Mother accused of leaving kids in car on hot day goes to court, leaves kids in car."
+
+```"At least she's consistently horrible. " Score: -3```
 
 
 
