@@ -5,16 +5,16 @@ In order to analyze human emotion in social networks, I used sentiment analysis 
 
 Reddit, is more than just a place to get updated on worldnews, look at cute pictures of puppies, and hear about the latest edition of world of warcraft. Reddit has become a community where millions of people gather every day to view and post their thoughts, opinions, and views on thousands of different topics. Reddit is great because it's public API allows access to lots of useful data just by adding ".json" to the end of the post's url. However, as you can see below, the API is somewhat hard to navigate. 
 
-<div align="left">
-        <img width="40%" src="img/MessyJson.jpg" alt="reddit json" title="reddit json"</img>
+<div align="center">
+        <img width="50%" src="img/MessyJson.jpg" alt="reddit json" title="reddit json"</img>
         <img height="2" width="10px">
 </div>
 
 
 I parsed the API, taking out the relevant information needed for my analysis. Here is a sample of my cleaned-up json:
 
-<div align="left">
-        <img width="40%" src="img/cleanjson.png" alt="clean json" title="clean json"</img>
+<div align="center">
+        <img width="60%" src="img/cleanjson.png" alt="clean json" title="clean json"</img>
         <img height="2" width="10px">
 </div>
 
@@ -40,8 +40,8 @@ Aside from the easy to access API, I chose to anaylyze reddit because it covers 
 
 This graph shows the sum sentiment scores of the top 50 subreddits from negative to positive. 
 
-<div align="left">
-        <img width="40%" src="img/subscores.png" alt="subscores" title="subscores"</img>
+<div align="center">
+        <img width="45%" src="img/subscores.png" alt="subscores" title="subscores"</img>
         <img height="2" width="10px">
 </div>
 
@@ -52,8 +52,8 @@ After analyzing the top 50 subreddits, I looked into contrasting subreddits.
 
 Here you can see that people posting about dogs are extremely more positive than people posting about cats.
 
-<div align="left">
-        <img width="40%" src="img/2015-06-16 at 2.34.22 PM.png" alt="reddit json" title="reddit json"</img>
+<div align="center">
+        <img width="45%" src="img/2015-06-16 at 2.34.22 PM.png" alt="reddit json" title="reddit json"</img>
         <img height="2" width="10px">
 </div>
 
@@ -61,8 +61,8 @@ Here you can see that people posting about dogs are extremely more positive than
 
 Here you can see the difference in sum sentiment scores for republicans versus democrats. Although the two groups can never seem to agree on anything, their sum sentiment scores are not that different. 
 
-<div align="left">
-        <img width="40%" src="img/politics.png" alt="reddit json" title="reddit json"</img>
+<div align="center">
+        <img width="45%" src="img/politics.png" alt="reddit json" title="reddit json"</img>
         <img height="2" width="10px">
 </div>
 
@@ -75,15 +75,12 @@ Finally, I analyzed the top 25 U.S. cities. The top 25 cities ranked according t
 Here you can see the different sum sentiment scores of each U.S. city. Suprising how the nation's capital has the second lowest sentiment score...
 
 <div align="left">
-        <img width="40%" src="img/cities.png" alt="clean json" title="clean json"</img>
-        <img width="40%" src="img/negativedc.jpg" alt="clean json" title="clean json"</img>
+        <img width="45%" src="img/cities.png" alt="clean json" title="clean json"</img>
+        <img width="45%" src="img/negativedc.jpg" alt="clean json" title="clean json"</img>
         <img height="2" width="10px">
 </div>
 
-<div align="right">
-        <img width="65%" src="img/negativedc.jpg" alt="clean json" title="clean json"</img>
-        <img height="2" width="10px">
-        
+
 </div>
 
 - - -
