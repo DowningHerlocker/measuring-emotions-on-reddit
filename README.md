@@ -52,16 +52,16 @@ After analyzing the top 50 subreddits, I looked into contrasting subreddits.
 
 ###Highlight comparisons###
 
-**Cats vs Dogs**
+                                                **Cats vs Dogs**
 <div align="center">
-        <img width="35%" src="img/catdog.png" alt="reddit json" title="reddit json"</img>
-        <img height="2" width="10px">
+        <img width="25%" src="img/catdog.png" alt="reddit json" title="reddit json"</img>
+        <img height="2" width="5px">
 </div>
 
-**Replublicans vs Democrats**
+                                        **Replublicans vs Democrats**
 <div align="center">
-        <img width="35%" src="img/politics.png" alt="reddit json" title="reddit json"</img>
-        <img height="2" width="10px">
+        <img width="25%" src="img/politics.png" alt="reddit json" title="reddit json"</img>
+        <img height="2" width="5px">
 </div>
 
 - - -
@@ -76,9 +76,6 @@ Here you can see the different sum sentiment scores of each U.S. city.
         <img width="45%" src="img/cities.png" alt="clean json" title="clean json"</img>
         <img width="45%" src="img/negativedc.jpg" alt="clean json" title="clean json"</img>
         <img height="2" width="10px">
-</div>
-
-
 </div>
 
 - - -
