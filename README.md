@@ -50,17 +50,15 @@ As you can see, the subreddit "IAmA" has the highest sum sentiment scores. With 
 - - -
 After analyzing the top 50 subreddits, I looked into contrasting subreddits.
 
-Here you can see that people posting about dogs are extremely more positive than people posting about cats.
+###Highlight comparisons###
 
+**Cats vs Dogs**
 <div align="center">
         <img width="35%" src="img/catdog.png" alt="reddit json" title="reddit json"</img>
         <img height="2" width="10px">
 </div>
 
-- - -
-
-Here you can see the difference in sum sentiment scores for republicans versus democrats. Although the two groups can never seem to agree on anything, their sum sentiment scores are not that different. 
-
+**Replublicans vs Democrats**
 <div align="center">
         <img width="35%" src="img/politics.png" alt="reddit json" title="reddit json"</img>
         <img height="2" width="10px">
