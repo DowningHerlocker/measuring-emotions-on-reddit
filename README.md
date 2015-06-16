@@ -69,10 +69,13 @@ Here you can see the different sum sentiment scores of each U.S. city. Suprising
 <div align="left">
         <img width="65%" src="img/cities.png" alt="clean json" title="clean json"</img>
         <img height="2" width="10px">
-        <img width="65%" src="img/negativedc.png" alt="clean json" title="clean json"</img>
 </div>
 
-[picture of negativedc]
+<div align="right">
+        <img width="65%" src="img/negativedc.png" alt="clean json" title="clean json"</img>
+        <img height="2" width="10px">
+        
+</div>
 
  Whether you want to analyze how people feel about your favorite sports teams, the country you're visiting this summer, or the candidates for the presidential election, using sentiment anaylsis can quickly determine the human emotions on thousands of different topics. 
 
