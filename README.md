@@ -55,7 +55,16 @@ Here you can see the difference in sum sentiment scores for republicans versus d
 [picture of repub/democrat]
 
 Finally, I analyzed the top 25 U.S. cities. The top 25 cities ranked according to population and rank respectively include: 
+
 ```New York City, Los Angeles, Chicago, Houston, Philadelphia, Phoenix, San Antonio, Dallas, San Jose, Austin, Jacksonville, San Francisco, Indianapolis, Columbus, Fortworth, Charlotte, Detroit, El Paso, Seattle, Denver, Washington D.C., Memphis, Boston, Nashville ```
 
+Here you can see the different sum sentiment scores of each U.S. city. Suprising how the nation's capital has the second lowest sentiment score...
 
+[picture of uscities]
+
+[picture of negativedc]
+
+ Whether you want to analyze how people feel about your favorite sports teams, the country you're visiting this summer, or the candidates for the presidential election, using sentiment anaylsis can quickly determine the human emotions on thousands of different topics. 
+
+- - -
 *6-4-15*
