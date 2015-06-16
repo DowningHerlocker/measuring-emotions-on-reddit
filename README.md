@@ -3,10 +3,10 @@ measuring-emotions-on-reddit
 
 In order to analyze human emotion in social networks, I used sentiment analysis on hundreds of comments on reddit.com. In this post, you'll see how I parsed through reddit's somewhat messy API, and found the sum sentiment scores for the top 50 subreddits. 
 
-Reddit, is more than just a place to get updated on worldnews, look at cute pictures of puppies, and hear about the latest edition of world of warcraft. Reddit has become a community where millions of people gather every day to view and post their thoughts, opinions, and views on thousands of different topics. Reddit is great because it's public API allows access to lots of useful data just by adding ".json" to the end of the post's url. However, as you can see below, the API is somewhat hard to navigate. 
+Reddit, is more than just a place to get updated on worldnews, look at cute pictures of puppies, and hear about the latest edition of world of warcraft. Reddit has become a community where millions of people gather every day to view and post their thoughts, opinions, and views on thousands of different topics. Reddit has a straightforward JSON API; access a JSON representation of any page by appending '.json' to the URL. Here is a comment taken from the subreddit [aww](http://www.reddit.com/r/aww/comments/3a1cba/this_is_ollie_hes_ready_for_business.json). 
 
 <div align="center">
-        <img width="50%" src="img/MessyJson.jpg" alt="reddit json" title="reddit json"</img>
+        <img width="50%" src="img/messy.jpg" alt="reddit json" title="reddit json"</img>
         <img height="2" width="10px">
 </div>
 
@@ -72,7 +72,7 @@ Finally, I analyzed the top 25 U.S. cities. The top 25 cities ranked according t
 
 ```New York City, Los Angeles, Chicago, Houston, Philadelphia, Phoenix, San Antonio, Dallas, San Jose, Austin, Jacksonville, San Francisco, Indianapolis, Columbus, Fortworth, Charlotte, Detroit, El Paso, Seattle, Denver, Washington D.C., Memphis, Boston, Nashville ```
 
-Here you can see the different sum sentiment scores of each U.S. city. Suprising how the nation's capital has the second lowest sentiment score...
+Here you can see the different sum sentiment scores of each U.S. city. 
 
 <div align="left">
         <img width="45%" src="img/cities.png" alt="clean json" title="clean json"</img>
