@@ -52,13 +52,13 @@ After analyzing the top 50 subreddits, I looked into contrasting subreddits.
 
 ###Highlight comparisons###
 
-                                                **Cats vs Dogs**
+                                                Cats vs Dogs
 <div align="center">
         <img width="25%" src="img/catdog.png" alt="reddit json" title="reddit json"</img>
         <img height="2" width="5px">
 </div>
 
-                                        **Replublicans vs Democrats**
+                                        Replublicans vs Democrats
 <div align="center">
         <img width="25%" src="img/politics.png" alt="reddit json" title="reddit json"</img>
         <img height="2" width="5px">
