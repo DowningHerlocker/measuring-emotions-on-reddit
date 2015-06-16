@@ -18,6 +18,7 @@ I parsed the API, taking out the relevant information needed for my analysis. He
         <img height="2" width="10px">
 </div>
 
+- - -
 
 With my new easy to navigate json, I ran a sentiment analysis test on all of the comments of each post on each subreddit. Sentiment is a Node.js modulue that uses a preset worldlist, where each block of test is scored based on the negative or positive value of each word. Below is an example of how the sentiment analysis works:
 
@@ -28,37 +29,65 @@ With my new easy to navigate json, I ran a sentiment analysis test on all of the
 Sometimes, the sentiment scores can be off, due to sentiment's failure to understand context, as seen below:
 
 ```
-"You cheeky bastard. Lemme get your number." -Score: -5
+"I'm so sorry for your loss. 😢" Score: -4
 ```
-
 
 However, by examining thousands of comments, the sum score pretty much averages out. 
 
-Aside from the easy to access API, I chose to anaylyze reddit because it covers such a broad range of topics, and is utilized by such a wide range of people. I performed the analysis on the top 50 subreddits. Below, you can see that the top 15 subreddits alone cover material of all types. 
+- - -
 
-[picture of top 15 subreddits]
+Aside from the easy to access API, I chose to anaylyze reddit because it covers such a broad range of topics, and is utilized by such a wide range of people. I performed the analysis on the top 50 subreddits. 
 
 This graph shows the sum sentiment scores of the top 50 subreddits from negative to positive. 
 
-[picture of all 50 subreddit scores]
+<div align="left">
+        <img width="65%" src="img/subscores.png" alt="subscores" title="subscores"</img>
+        <img height="2" width="10px">
+</div>
 
-As you can see, the subreddit "IAmA" has the highest sum sentiment scores. With the "IAmA" subreddit, users post what they do in life, and people can comment, ask questions, ect. Let's look at a few posts in this subreddit to see what sentiment analysis found. 
+As you can see, the subreddit "IAmA" has the highest sum sentiment scores. With the "I Am A" subreddit, users post what they do in life, and people can comment, ask questions, ect. The subreddit with the most negative sum sentiment score was "AskReddit", where users can ask reddit anything. 
 
-[Subreddit: I Am A
-Post: "We're the Google Flights team, makers of flight search related stuff. Ask us anything!"]
+- - -
+After analyzing the top 50 subreddits, I looked into contrasting subreddits.
 
-This post in particular had 329 total comments, which I easily found from parsing the API. Of the 329 comments, there were some negative comments, such as:
- 	
- 	["Why did you eliminate the list view of flights? The graphic map might be neat to look at but it is a time waster for business travelers. You lost my business." ###Score: -3]
+Here you can see that people posting about dogs are extremely more positive than people posting about cats.
 
- and many positive comments, such as:
+<div align="left">
+        <img width="65%" src="img/catdog.jpg" alt="reddit json" title="reddit json"</img>
+        <img height="2" width="10px">
+</div>
 
-```First. I'd like to say thank you for making an amazing tool which works so well and fluidly. I often go on it for fun to see where I could go with 'x' amount of money. I was wondering if there will be any chance of being able to compare flights by area or region. For example, I live in NW England and I have about 3 nearby international airports and it'd be great to be able to say all airports in England or list several airports. And also, what would need to be done for Google to analyse patterns and try to predict when the cheapest flight will be available for booking for going on a certain date? Keep up the amazing work you do! Your amazing tool meant I could go on holiday this summer because I could see where was cheapest to fly to. Literally, you have made my summer. Score: 26 ```
+- - -
 
- 
+Here you can see the difference in sum sentiment scores for republicans versus democrats. Although the two groups can never seem to agree on anything, their sum sentiment scores are not that different. 
 
-In contrast to the subreddit "IAmA", the subreddit with the lowest sum sentiment score was "AskReddit" 
+<div align="left">
+        <img width="65%" src="img/politics.jpg" alt="reddit json" title="reddit json"</img>
+        <img height="2" width="10px">
+</div>
 
-[]
+- - -
 
+Finally, I analyzed the top 25 U.S. cities. The top 25 cities ranked according to population and rank respectively include: 
+
+```New York City, Los Angeles, Chicago, Houston, Philadelphia, Phoenix, San Antonio, Dallas, San Jose, Austin, Jacksonville, San Francisco, Indianapolis, Columbus, Fortworth, Charlotte, Detroit, El Paso, Seattle, Denver, Washington D.C., Memphis, Boston, Nashville ```
+
+Here you can see the different sum sentiment scores of each U.S. city. Suprising how the nation's capital has the second lowest sentiment score...
+
+<div align="left">
+        <img width="65%" src="img/cities.png" alt="clean json" title="clean json"</img>
+        <img height="2" width="10px">
+</div>
+
+<div align="right">
+        <img width="65%" src="img/negativedc.png" alt="clean json" title="clean json"</img>
+        <img height="2" width="10px">
+        
+</div>
+
+- - -
+
+ Whether you want to analyze how people feel about your favorite sports teams, the country you're visiting this summer, or the candidates for the presidential election, using sentiment anaylsis can quickly determine the human emotions on thousands of different topics. 
+
+- - -
 *6-4-15*
