@@ -3,7 +3,7 @@ measuring-emotions-on-reddit
 
 In order to analyze human emotion in social networks, I used sentiment analysis on hundreds of comments on reddit.com. In this post, you'll see how I parsed through reddit's somewhat messy API, and found the sum sentiment scores for the top 50 subreddits. 
 
-Reddit, is more than just a place to get updated on worldnews, look at cute pictures of puppies, and hear about the latest edition of world of warcraft. Reddit has become a community where millions of people gather every day to view and post their thoughts, opinions, and views on thousands of different topics. Reddit has a straightforward JSON API; access a JSON representation of any page by appending '.json' to the URL. Here is a comment taken from the subreddit [aww](http://www.reddit.com/r/aww/comments/3a1cba/this_is_ollie_hes_ready_for_business.json). 
+Reddit, is more than just a place to get updated on worldnews, look at cute pictures of puppies, and hear about the latest edition of world of warcraft. Reddit has become a community where millions of people gather every day to view and post their thoughts, opinions, and views on thousands of different topics. Reddit has a straightforward JSON API; access a JSON representation of any page by appending '.json' to the URL. Here is a comment taken from the subreddit [aww](http://www.reddit.com/r/aww/comments/3a1cba/this_is_ollie_hes_ready_for_business). 
 
 <div align="center">
         <img width="50%" src="img/messy.jpg" alt="reddit json" title="reddit json"</img>
@@ -29,7 +29,7 @@ With my new easy to navigate json, I ran a sentiment analysis test on all of the
 Sometimes, the sentiment scores can be off, due to sentiment's failure to understand context, as seen below:
 
 ```
-"I'm so sorry for your loss. 😢" Score: -4
+" "Holy fuck. That's like weaponized cuteness right there." Score: -2
 ```
 
 However, by examining thousands of comments, the sum score pretty much averages out. 
