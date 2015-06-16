@@ -14,7 +14,7 @@ Reddit, is more than just a place to get updated on worldnews, look at cute pict
 I parsed the API, taking out the relevant information needed for my analysis. Here is a sample of my cleaned-up json:
 
 <div align="center">
-        <img width="60%" src="img/cleanjson.png" alt="clean json" title="clean json"</img>
+        <img width="60%" src="img/clean.png" alt="clean json" title="clean json"</img>
         <img height="2" width="10px">
 </div>
 
