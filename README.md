@@ -53,6 +53,7 @@ After analyzing the top 50 subreddits, I looked into contrasting subreddits.
 ###Highlight comparisons###
 
                                                 Cats vs Dogs
+
 <div align="center">
         <img width="25%" src="img/catdog.png" alt="reddit json" title="reddit json"</img>
         <img height="2" width="5px">
