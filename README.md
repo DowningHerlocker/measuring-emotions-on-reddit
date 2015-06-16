@@ -53,7 +53,7 @@ After analyzing the top 50 subreddits, I looked into contrasting subreddits.
 Here you can see that people posting about dogs are extremely more positive than people posting about cats.
 
 <div align="left">
-        <img width="65%" src="img/2015-06-16 at 2.34.22 PM.png.jpg" alt="reddit json" title="reddit json"</img>
+        <img width="65%" src="img/2015-06-16 at 2.34.22 PM.png" alt="reddit json" title="reddit json"</img>
         <img height="2" width="10px">
 </div>
 
@@ -62,7 +62,7 @@ Here you can see that people posting about dogs are extremely more positive than
 Here you can see the difference in sum sentiment scores for republicans versus democrats. Although the two groups can never seem to agree on anything, their sum sentiment scores are not that different. 
 
 <div align="left">
-        <img width="65%" src="img/politics.jpg" alt="reddit json" title="reddit json"</img>
+        <img width="65%" src="img/politics.png" alt="reddit json" title="reddit json"</img>
         <img height="2" width="10px">
 </div>
 
@@ -80,7 +80,7 @@ Here you can see the different sum sentiment scores of each U.S. city. Suprising
 </div>
 
 <div align="right">
-        <img width="65%" src="img/negativedc.png" alt="clean json" title="clean json"</img>
+        <img width="65%" src="img/negativedc.jpg" alt="clean json" title="clean json"</img>
         <img height="2" width="10px">
         
 </div>
