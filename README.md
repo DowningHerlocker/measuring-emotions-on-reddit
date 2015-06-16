@@ -28,7 +28,7 @@ With my new easy to navigate json, I ran a sentiment analysis test on all of the
 Sometimes, the sentiment scores can be off, due to sentiment's failure to understand context, as seen below:
 
 ```
-"You cheeky bastard. Lemme get your number." -Score: -5
+"I'm so sorry for your loss. 😢" Score: -4
 ```
 
 However, by examining thousands of comments, the sum score pretty much averages out. 
