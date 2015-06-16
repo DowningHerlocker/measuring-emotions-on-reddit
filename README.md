@@ -53,7 +53,7 @@ After analyzing the top 50 subreddits, I looked into contrasting subreddits.
 Here you can see that people posting about dogs are extremely more positive than people posting about cats.
 
 <div align="center">
-        <img width="45%" src="img/2015-06-16 at 2.34.22 PM.png" alt="reddit json" title="reddit json"</img>
+        <img width="45%" src="img/catdog.png" alt="reddit json" title="reddit json"</img>
         <img height="2" width="10px">
 </div>
 
