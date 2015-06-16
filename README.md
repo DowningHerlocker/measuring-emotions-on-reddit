@@ -42,26 +42,20 @@ This graph shows the sum sentiment scores of the top 50 subreddits from negative
         <img height="2" width="10px">
 </div>
 
-As you can see, the subreddit "IAmA" has the highest sum sentiment scores. With the "IAmA" subreddit, users post what they do in life, and people can comment, ask questions, ect. Let's look at a few posts in this subreddit to see what sentiment analysis found. 
+As you can see, the subreddit "IAmA" has the highest sum sentiment scores. With the "I Am A" subreddit, users post what they do in life, and people can comment, ask questions, ect. The subreddit with the most negative sum sentiment score was "AskReddit", where users can ask reddit anything. 
 
-**Subreddit: I Am A**
+After analyzing the top 50 subreddits, I looked into contrasting subreddits.
 
-**Post:** "We're the Google Flights team, makers of flight search related stuff. Ask us anything!"
+Here you can see that people posting about dogs are extremely more positive than people posting about cats.
 
-This post in particular had 329 total comments, which I easily found from parsing the API. Of the 329 comments, there were some negative comments, such as:
- 	
- ```"Why did you eliminate the list view of flights? The graphic map might be neat to look at but it is a time waster for business travelers. You lost my business." -Score: -3```
+[picture of cat/dog]
 
- and many positive comments, such as:
+Here you can see the difference in sum sentiment scores for republicans versus democrats. Although the two groups can never seem to agree on anything, their sum sentiment scores are not that different. 
 
-```"I love the new amenity data on the site. Are there any plans to expand that? Mostly interested in more WiFi info and entertainment, to be honest." -Score: 8 ```
+[picture of repub/democrat]
 
- 
-
-
-
-
-
+Finally, I analyzed the top 25 U.S. cities. The top 25 cities ranked according to population and rank respectively include: 
+```New York City, Los Angeles, Chicago, Houston, Philadelphia, Phoenix, San Antonio, Dallas, San Jose, Austin, Jacksonville, San Francisco, Indianapolis, Columbus, Fortworth, Charlotte, Detroit, El Paso, Seattle, Denver, Washington D.C., Memphis, Boston, Nashville ```
 
 
 *6-4-15*
