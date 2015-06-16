@@ -58,34 +58,6 @@ This post in particular had 329 total comments, which I easily found from parsin
 
  
 
-In contrast to the subreddit "IAmA", the subreddit with the lowest sum sentiment score was "AskReddit". Below are a couple comments that definitely helped "AskReddit" become the most negative subreddit.
-
-**Subreddit: Ask Reddit**
-
-**Post:** "Married men, how's your relationship with your mother-in-law?"
-
-```"I've kicked her out of my house twice. I hate her and she hates me. I have practiced looking upset when my wife calls to tell me she is dead. I will dance on her grave. " Score: -13 ```
-
-**Post:** "Previous active users of /r/fatpeoplehate, why do you hate fat people?"
-
-```"I hate fatties because of excuses and also many are type 2 diabetic. I'm a type 1 for 17 years almost and whenever I mention  my diabetes people say how you aren't fat or you don't look fat. I don't like being categorized with sacks of shit who don't give a fuck about their bodies to the point where they get a serious disability. Also many people won't donate to diabetic charities because when people here diabetes they think fat lazy people who put themselves in the position that that are when in reality type 1s didn't do shit to get diabetes but type 2s got it by not caring about themselves. " Score: -14 ```
-
-**Post:** "If you and only you were anonymously allowed to kill people, would you ?"
-
-```"No, I'm not the government." Score: -1 ```
-
-Another extremely negative subreddit was "News". Shocking! Here are a couple comments from this subreddit:
-
-**Subreddit:** News
-
-**Post:** "Texas police shut down girls' lemonade stand, demand permit"
-
-```"Wait, they made $25 in an hour? Well fuck my job I'm gonna go sell some juice."```
-
-**Post:** "Mother accused of leaving kids in car on hot day goes to court, leaves kids in car."
-
-```"At least she's consistently horrible. " Score: -3```
-
 
 
 
