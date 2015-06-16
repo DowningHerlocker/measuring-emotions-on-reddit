@@ -48,11 +48,17 @@ After analyzing the top 50 subreddits, I looked into contrasting subreddits.
 
 Here you can see that people posting about dogs are extremely more positive than people posting about cats.
 
-[picture of cat/dog]
+<div align="left">
+        <img width="65%" src="img/catdog.jpg" alt="reddit json" title="reddit json"</img>
+        <img height="2" width="10px">
+</div>
 
 Here you can see the difference in sum sentiment scores for republicans versus democrats. Although the two groups can never seem to agree on anything, their sum sentiment scores are not that different. 
 
-[picture of repub/democrat]
+<div align="left">
+        <img width="65%" src="img/politics.jpg" alt="reddit json" title="reddit json"</img>
+        <img height="2" width="10px">
+</div>
 
 Finally, I analyzed the top 25 U.S. cities. The top 25 cities ranked according to population and rank respectively include: 
 
@@ -60,7 +66,11 @@ Finally, I analyzed the top 25 U.S. cities. The top 25 cities ranked according t
 
 Here you can see the different sum sentiment scores of each U.S. city. Suprising how the nation's capital has the second lowest sentiment score...
 
-[picture of uscities]
+<div align="left">
+        <img width="65%" src="img/cities.png" alt="clean json" title="clean json"</img>
+        <img height="2" width="10px">
+        <img width="65%" src="img/negativedc.png" alt="clean json" title="clean json"</img>
+</div>
 
 [picture of negativedc]
 
