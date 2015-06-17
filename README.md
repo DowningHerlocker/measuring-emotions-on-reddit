@@ -1,7 +1,7 @@
 measuring-emotions-on-reddit
 ===
 
-In order to analyze human emotion in social networks, I used sentiment analysis on hundreds of comments on reddit.com. In this post, you'll see how I parsed through reddit's somewhat messy API, and found the sum sentiment scores for the top 50 subreddits. 
+In order to analyze human emotion in social networks, I used sentiment analysis on comments from the 50 top subreddits. In this post, you'll see how I parsed through reddit's somewhat messy API, and found the sum sentiment scores for the top 50 subreddits. 
 
 Reddit, is more than just a place to get updated on worldnews, look at cute pictures of puppies, and hear about the latest edition of world of warcraft. Reddit has become a community where millions of people gather every day to view and post their thoughts, opinions, and views on thousands of different topics. Reddit has a straightforward JSON API; access a JSON representation of any page by appending '.json' to the URL. Here is a comment taken from the subreddit [aww](http://www.reddit.com/r/aww/comments/3a1cba/this_is_ollie_hes_ready_for_business). 
 
@@ -20,7 +20,7 @@ I parsed the API, taking out the relevant information needed for my analysis. He
 
 - - -
 
-With my new easy to navigate json, I ran a sentiment analysis test on all of the comments of each post on each subreddit. Sentiment is a Node.js modulue that uses a preset worldlist, where each block of test is scored based on the negative or positive value of each word. Below is an example of how the sentiment analysis works:
+With my new easy to navigate json, I ran a sentiment analysis test on all of the comments of each post on each subreddit. Sentiment, created by [@thisandagain](https://github.com/thisandagain, is a Node.js modulue that uses a preset worldlist, where each block of test is scored based on the negative or positive value of each word. Below is an example of how the sentiment analysis works:
 
 ```
 "You're dad is adorable and I want to adopt him." -Score: 5
@@ -29,7 +29,7 @@ With my new easy to navigate json, I ran a sentiment analysis test on all of the
 Sometimes, the sentiment scores can be off, due to sentiment's failure to understand context, as seen below:
 
 ```
-" "Holy fuck. That's like weaponized cuteness right there." Score: -2
+"Holy fuck. That's like weaponized cuteness right there." Score: -2
 ```
 
 However, by examining thousands of comments, the sum score pretty much averages out. 
@@ -85,7 +85,7 @@ Here you can see the different sum sentiment scores of each U.S. city.
         <img height="2" width="10px">
 </div>
 
-- - -
+
 
  Whether you want to analyze how people feel about your favorite sports teams, the country you're visiting this summer, or the candidates for the presidential election, using sentiment anaylsis can quickly determine the human emotions on thousands of different topics. 
 
