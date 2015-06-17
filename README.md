@@ -86,8 +86,7 @@ Here you can see the different sum sentiment scores of each U.S. city.
 </div>
 
 
-
- Whether you want to analyze how people feel about your favorite sports teams, the country you're visiting this summer, or the candidates for the presidential election, using sentiment anaylsis can quickly determine the human emotions on thousands of different topics. 
+Whether you want to analyze how people feel about your favorite sports teams, the country you're visiting this summer, or the candidates for the presidential election, using sentiment anaylsis can quickly determine the human emotions on thousands of different topics. 
 
 - - -
 *6-4-15*
