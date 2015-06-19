@@ -49,11 +49,11 @@ After analyzing the top 50 subreddits, I looked into contrasting subreddits.
 
 ###Highlight comparisons###
 
-                                                Cats vs Dogs
+**Cats vs Dogs**
 
 <iframe src="http://downingherlocker.github.io/measuring-emotions-on-reddit/catdogindex.html" marginwidth="100" marginheight="100" scrolling="no"></iframe>
 
-                                        Replublicans vs Democrats
+**Replublicans vs Democrats**
 
 <iframe src="http://downingherlocker.github.io/measuring-emotions-on-reddit/politicsindex.html" marginwidth="100" marginheight="100" scrolling="no"></iframe>
 
@@ -79,11 +79,11 @@ After analyzing the sum subreddit scores, I wanted to look more into what kind o
 
 ###Highlight Subreddits 
 
-                                                **News**
+**News**
 
 <iframe src="http://downingherlocker.github.io/measuring-emotions-on-reddit/newsindex.html" marginwidth="100" marginheight="100" scrolling="no"></iframe>     
 
-                                             **Technology**
+**Technology**
                                              
 <iframe src="http://downingherlocker.github.io/measuring-emotions-on-reddit/techindex.html" marginwidth="100" marginheight="100" scrolling="no"></iframe>                                              
 
