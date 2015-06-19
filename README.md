@@ -40,7 +40,7 @@ Aside from the easy to access API, I chose to anaylyze reddit because it covers 
 
 This graph shows the sum sentiment scores of the top 50 subreddits from negative to positive. 
 
-<iframe src="http://downingherlocker.github.io/measuring-emotions-on-reddit/index.html" marginwidth="100" marginheight="100" scrolling="no"></iframe>
+<iframe src="http://downingherlocker.github.io/measuring-emotions-on-reddit/index.html" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
 As you can see, the subreddit "IAmA" has the highest sum sentiment scores. With the "I Am A" subreddit, users post what they do in life, and people can comment, ask questions, ect. The subreddit with the most negative sum sentiment score was "AskReddit", where users can ask reddit anything. 
 
@@ -71,7 +71,7 @@ Finally, I analyzed the top 25 U.S. cities. The top 25 cities ranked according t
 
 Here you can see the different sum sentiment scores of each U.S. city. 
 
-<iframe src="http://downingherlocker.github.io/measuring-emotions-on-reddit/cityindex.html" marginwidth="100" marginheight="100" scrolling="no"></iframe>
+<iframe src="http://downingherlocker.github.io/measuring-emotions-on-reddit/cityindex.html" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
 - - -
 
@@ -81,11 +81,11 @@ After analyzing the sum subreddit scores, I wanted to look more into what kind o
 
 **News**
 
-<iframe src="http://downingherlocker.github.io/measuring-emotions-on-reddit/newsindex.html" marginwidth="100" marginheight="100" scrolling="no"></iframe>     
+<iframe src="http://downingherlocker.github.io/measuring-emotions-on-reddit/newsindex.html" marginwidth="0" marginheight="0" scrolling="no"></iframe>     
 
 **Technology**
                                              
-<iframe src="http://downingherlocker.github.io/measuring-emotions-on-reddit/techindex.html" marginwidth="100" marginheight="100" scrolling="no"></iframe>                                              
+<iframe src="http://downingherlocker.github.io/measuring-emotions-on-reddit/techindex.html" marginwidth="0" marginheight="0" scrolling="no"></iframe>                                              
 
 Whether you want to analyze how people feel about your favorite sports teams, the country you're visiting this summer, or the candidates for the presidential election, using sentiment anaylsis can quickly determine the human emotions on thousands of different topics. 
 
