@@ -1,23 +1,30 @@
 measuring-emotions-on-reddit
 ===
 
-In order to analyze human emotion in social networks, I used sentiment analysis on hundreds of comments on reddit.com. In this post, you'll see how I parsed through reddit's somewhat messy API, and found the sum sentiment scores for the top 50 subreddits. 
+In order to analyze human emotion in social networks, I used sentiment analysis on comments from the 50 top subreddits. In this post, you'll see how I parsed through reddit's somewhat messy API, and found the sum sentiment scores for the top 50 subreddits. 
 
 Reddit, is more than just a place to get updated on worldnews, look at cute pictures of puppies, and hear about the latest edition of world of warcraft. Reddit has become a community where millions of people gather every day to view and post their thoughts, opinions, and views on thousands of different topics. Reddit has a straightforward JSON API; access a JSON representation of any page by appending '.json' to the URL. Here is a comment taken from the subreddit [aww](http://www.reddit.com/r/aww/comments/3a1cba/this_is_ollie_hes_ready_for_business). 
 
+<<<<<<< HEAD
 <iframe src="http://bl.ocks.org/mbostock/raw/4061502/0a200ddf998aa75dfdb1ff32e16b680a15e5cb01/" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+=======
+<div align="center">
+        <img width="60%" src="img/messy.png" alt="reddit json" title="reddit json"</img>
+        <img height="2" width="10px">
+</div>
+>>>>>>> 6e8e1dc8e0e6fbf7bd051f1b8a1506085b8cee3a
 
 
 I parsed the API, taking out the relevant information needed for my analysis. Here is a sample of my cleaned-up json:
 
 <div align="center">
-        <img width="60%" src="img/cleanjson.png" alt="clean json" title="clean json"</img>
+        <img width="60%" src="img/clean.png" alt="clean json" title="clean json"</img>
         <img height="2" width="10px">
 </div>
 
 - - -
 
-With my new easy to navigate json, I ran a sentiment analysis test on all of the comments of each post on each subreddit. Sentiment is a Node.js modulue that uses a preset worldlist, where each block of test is scored based on the negative or positive value of each word. Below is an example of how the sentiment analysis works:
+With my new easy to navigate json, I ran a sentiment analysis test on all of the comments of each post on each subreddit. Sentiment, created by [@thisandagain](https://github.com/thisandagain, is a Node.js modulue that uses a preset worldlist, where each block of test is scored based on the negative or positive value of each word. Below is an example of how the sentiment analysis works:
 
 ```
 "You're dad is adorable and I want to adopt him." -Score: 5
@@ -26,7 +33,7 @@ With my new easy to navigate json, I ran a sentiment analysis test on all of the
 Sometimes, the sentiment scores can be off, due to sentiment's failure to understand context, as seen below:
 
 ```
-" "Holy fuck. That's like weaponized cuteness right there." Score: -2
+"Holy fuck. That's like weaponized cuteness right there." Score: -2
 ```
 
 However, by examining thousands of comments, the sum score pretty much averages out. 
@@ -47,27 +54,32 @@ As you can see, the subreddit "IAmA" has the highest sum sentiment scores. With 
 - - -
 After analyzing the top 50 subreddits, I looked into contrasting subreddits.
 
-Here you can see that people posting about dogs are extremely more positive than people posting about cats.
+###Highlight comparisons###
+
+                                                Cats vs Dogs
 
 <div align="center">
-        <img width="35%" src="img/catdog.png" alt="reddit json" title="reddit json"</img>
-        <img height="2" width="10px">
+        <img width="25%" src="img/catdog.png" alt="reddit json" title="reddit json"</img>
+        <img height="2" width="5px">
 </div>
 
-- - -
-
-Here you can see the difference in sum sentiment scores for republicans versus democrats. Although the two groups can never seem to agree on anything, their sum sentiment scores are not that different. 
-
+                                        Replublicans vs Democrats
 <div align="center">
-        <img width="35%" src="img/politics.png" alt="reddit json" title="reddit json"</img>
-        <img height="2" width="10px">
+        <img width="25%" src="img/politics.png" alt="reddit json" title="reddit json"</img>
+        <img height="2" width="5px">
 </div>
 
 - - -
 
 Finally, I analyzed the top 25 U.S. cities. The top 25 cities ranked according to population and rank respectively include: 
 
-```New York City, Los Angeles, Chicago, Houston, Philadelphia, Phoenix, San Antonio, Dallas, San Jose, Austin, Jacksonville, San Francisco, Indianapolis, Columbus, Fortworth, Charlotte, Detroit, El Paso, Seattle, Denver, Washington D.C., Memphis, Boston, Nashville ```
+```
+1.New York City         6. Philadelphia         11. Austin              16. Fortworth           21. Denver 
+2.Los Angeles           7. Phoenix              12. Jacksonville        17. Charlotte           22. Washington DC     
+3.Chicago               8. San Antonio          13. San Francisco       18. Detroit             23. Memphis
+4.Houston               9. Dallas               14. Indianapolis        19. El Paso             24. Boston
+5.Philadelphia          10. San Jose            15. Columbus            20. Seattle             25. Nashville
+```
 
 Here you can see the different sum sentiment scores of each U.S. city. 
 
@@ -78,11 +90,7 @@ Here you can see the different sum sentiment scores of each U.S. city.
 </div>
 
 
-</div>
-
-- - -
-
- Whether you want to analyze how people feel about your favorite sports teams, the country you're visiting this summer, or the candidates for the presidential election, using sentiment anaylsis can quickly determine the human emotions on thousands of different topics. 
+Whether you want to analyze how people feel about your favorite sports teams, the country you're visiting this summer, or the candidates for the presidential election, using sentiment anaylsis can quickly determine the human emotions on thousands of different topics. 
 
 - - -
 *6-4-15*
