@@ -75,15 +75,17 @@ Here you can see the different sum sentiment scores of each U.S. city.
 
 - - -
 
-After analyzing the sum subreddit scores, I wanted to look more about what kind of posts were contained in each subreddit. 
+After analyzing the sum subreddit scores, I wanted to look more into what kind of posts were contained in each subreddit. 
 
 ###Highlight Subreddits 
 
-                                                *News*
+                                                **News**
 
 <iframe src="http://downingherlocker.github.io/measuring-emotions-on-reddit/newsindex.html" marginwidth="100" marginheight="100" scrolling="no"></iframe>     
 
-                                                *
+                                             **Technology**
+                                             
+<iframe src="http://downingherlocker.github.io/measuring-emotions-on-reddit/techindex.html" marginwidth="100" marginheight="100" scrolling="no"></iframe>                                              
 
 Whether you want to analyze how people feel about your favorite sports teams, the country you're visiting this summer, or the candidates for the presidential election, using sentiment anaylsis can quickly determine the human emotions on thousands of different topics. 
 
