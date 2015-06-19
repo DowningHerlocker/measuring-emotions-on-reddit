@@ -53,6 +53,8 @@ After analyzing the top 50 subreddits, I looked into contrasting subreddits.
 
 <iframe src="http://downingherlocker.github.io/measuring-emotions-on-reddit/catdogindex.html" marginwidth="100" marginheight="100" scrolling="no"></iframe>
 
+<iframe src="http://downingherlocker.github.io/measuring-emotions-on-reddit/catdogindex.html" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
 **Replublicans vs Democrats**
 
 <iframe src="http://downingherlocker.github.io/measuring-emotions-on-reddit/politicsindex.html" marginwidth="100" marginheight="100" scrolling="no"></iframe>
