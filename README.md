@@ -53,16 +53,12 @@ After analyzing the top 50 subreddits, I looked into contrasting subreddits.
 
                                                 Cats vs Dogs
 
-<div align="center">
-        <img width="25%" src="img/catdog.png" alt="reddit json" title="reddit json"</img>
-        <img height="2" width="5px">
-</div>
+
+<iframe src=  http://downingherlocker.github.io/measuring-emotions-on-reddit/index.html width="480" height="320" scrolling="no" frameborder="0">
 
                                         Replublicans vs Democrats
-<div align="center">
-        <img width="25%" src="img/politics.png" alt="reddit json" title="reddit json"</img>
-        <img height="2" width="5px">
-</div>
+
+<iframe src=  http://downingherlocker.github.io/measuring-emotions-on-reddit/politicsindex.html width="480" height="320" scrolling="no" frameborder="0">
 
 - - -
 
@@ -78,11 +74,8 @@ Finally, I analyzed the top 25 U.S. cities. The top 25 cities ranked according t
 
 Here you can see the different sum sentiment scores of each U.S. city. 
 
-<div align="left">
-        <img width="45%" src="img/cities.png" alt="clean json" title="clean json"</img>
-        <img width="45%" src="img/negativedc.jpg" alt="clean json" title="clean json"</img>
-        <img height="2" width="10px">
-</div>
+
+<iframe src=  http://downingherlocker.github.io/measuring-emotions-on-reddit/cityindex.html width="480" height="320" scrolling="no" frameborder="0">
 
 
 Whether you want to analyze how people feel about your favorite sports teams, the country you're visiting this summer, or the candidates for the presidential election, using sentiment anaylsis can quickly determine the human emotions on thousands of different topics. 
