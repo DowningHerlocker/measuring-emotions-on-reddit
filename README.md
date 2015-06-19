@@ -63,7 +63,7 @@ Finally, I analyzed the top 25 U.S. cities. The top 25 cities ranked according t
 
 ```
 1.New York City         6. Philadelphia         11. Austin              16. Fortworth           21. Denver 
-2.Los Angeles           7. Phoenix              12. Jacksonville        17. Charlotte           22. Washington DC     
+2.Los Angeles           7. Phoenix              12. Jacksonville        17. Charlotte           22. Washington DC  
 3.Chicago               8. San Antonio          13. San Francisco       18. Detroit             23. Memphis
 4.Houston               9. Dallas               14. Indianapolis        19. El Paso             24. Boston
 5.Philadelphia          10. San Jose            15. Columbus            20. Seattle             25. Nashville
@@ -73,6 +73,17 @@ Here you can see the different sum sentiment scores of each U.S. city.
 
 <iframe src="http://downingherlocker.github.io/measuring-emotions-on-reddit/cityindex.html" marginwidth="100" marginheight="100" scrolling="no"></iframe>
 
+- - -
+
+After analyzing the sum subreddit scores, I wanted to look more about what kind of posts were contained in each subreddit. 
+
+###Highlight Subreddits 
+
+                                                *News*
+
+<iframe src="http://downingherlocker.github.io/measuring-emotions-on-reddit/newsindex.html" marginwidth="100" marginheight="100" scrolling="no"></iframe>     
+
+                                                *
 
 Whether you want to analyze how people feel about your favorite sports teams, the country you're visiting this summer, or the candidates for the presidential election, using sentiment anaylsis can quickly determine the human emotions on thousands of different topics. 
 
