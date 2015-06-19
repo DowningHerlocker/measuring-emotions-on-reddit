@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title> Subreddit Scores </title>
+<style>
+
+body {
+  font: 10px sans-serif;
+
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.bar.negative {
+  fill: red;
+}
+.bar.positive {
+  fill: steelblue;
+}
+
+
+.bar.positive:hover {
+  fill: black ;
+}
+
+.bar.negative:hover {
+  fill: black;
+}
+.x.axis path {
+  display: line;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+</style>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script>
+
+var w = 400;
+var h = 600;
+var padding = 25;
+//var formatPercent = d3.format(".0%");
+
+/*var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+//var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+    //.tickFormat(formatPercent); */
+
+var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return d.subreddit  + " <strong>:</strong> <span style='color:white'>" + d.sum + "</span>";
+  })
+
+var svg = d3.select("body").append("svg")
+    .attr("width", w + padding + padding)
+    .attr("height", h + padding + padding)
+  .append("g")
+    .attr("transform", "translate(" + padding + "," + padding+ ")");
+
+svg.call(tip);
+
+d3.json("citystats.json", function (error, subreddits) {
+  subreddits = subreddits.sort (function (a, b){
+    return a.sum - b.sum
+  })
+  var xScale = d3.scale.ordinal()
+    .domain(subreddits.map(function(d) { 
+      return d.subreddit;
+    }))
+    .rangeRoundBands([0, w], .1);
+
+  var yScale = d3.scale.linear()
+    .domain(d3.extent(subreddits, function(d){
+      return d.sum;
+    }))
+    .range([w+padding,padding]);
+
+//deleted axes 
+//create barchart 
+  svg.selectAll(".bar")
+      .data(subreddits)
+    .enter().append("rect")
+      .attr("class", function (d) {
+        return d.sum < 0 ? " bar negative" : "bar positive";
+      })
+      .attr("x", function (d) { 
+        return xScale(d.subreddit)/2; 
+      })
+      .attr("y", function(d) { 
+        return yScale(Math.max(0, d.sum)); 
+      })
+      .attr("width", xScale.rangeBand()/2)
+      .attr("height", function(d) { 
+        return Math.abs(yScale(d.sum) - yScale(0)); 
+      })
+      .on('mouseover', tip.show)
+      .on('mouseout', tip.hide)
+
+
+});
+</script>

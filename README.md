@@ -5,14 +5,12 @@ In order to analyze human emotion in social networks, I used sentiment analysis 
 
 Reddit, is more than just a place to get updated on worldnews, look at cute pictures of puppies, and hear about the latest edition of world of warcraft. Reddit has become a community where millions of people gather every day to view and post their thoughts, opinions, and views on thousands of different topics. Reddit has a straightforward JSON API; access a JSON representation of any page by appending '.json' to the URL. Here is a comment taken from the subreddit [aww](http://www.reddit.com/r/aww/comments/3a1cba/this_is_ollie_hes_ready_for_business). 
 
-<<<<<<< HEAD
-<iframe src="http://bl.ocks.org/mbostock/raw/4061502/0a200ddf998aa75dfdb1ff32e16b680a15e5cb01/" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-=======
+
 <div align="center">
         <img width="60%" src="img/messy.png" alt="reddit json" title="reddit json"</img>
         <img height="2" width="10px">
 </div>
->>>>>>> 6e8e1dc8e0e6fbf7bd051f1b8a1506085b8cee3a
+
 
 
 I parsed the API, taking out the relevant information needed for my analysis. Here is a sample of my cleaned-up json:
@@ -44,10 +42,7 @@ Aside from the easy to access API, I chose to anaylyze reddit because it covers 
 
 This graph shows the sum sentiment scores of the top 50 subreddits from negative to positive. 
 
-<div align="center">
-        <img width="45%" src="img/subscores.png" alt="subscores" title="subscores"</img>
-        <img height="2" width="10px">
-</div>
+<iframe src=  http://downingherlocker.github.io/measuring-emotions-on-reddit/index.html width="480" height="320" scrolling="no" frameborder="0">
 
 As you can see, the subreddit "IAmA" has the highest sum sentiment scores. With the "I Am A" subreddit, users post what they do in life, and people can comment, ask questions, ect. The subreddit with the most negative sum sentiment score was "AskReddit", where users can ask reddit anything. 
 
