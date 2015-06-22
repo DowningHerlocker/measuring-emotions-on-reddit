@@ -44,7 +44,6 @@ This graph shows the sum sentiment scores of the top 50 subreddits from negative
 
 As you can see, the subreddit "IAmA" has the highest sum sentiment scores. With the "I Am A" subreddit, users post what they do in life, and people can comment, ask questions, ect. The subreddit with the most negative sum sentiment score was "AskReddit", where users can ask reddit anything. 
 
-- - -
 After analyzing the top 50 subreddits, I looked into contrasting subreddits.
 
 ###Highlight comparisons###
