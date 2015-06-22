@@ -67,8 +67,8 @@ body {
 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 <script>
 
-var w = 400;
-var h = 600;
+var w = 1000;
+var h = 1400;
 var padding = 25;
 //var formatPercent = d3.format(".0%");
 
@@ -121,12 +121,12 @@ d3.json("subreddits.json", function (error, subreddits) {
         return d.sum < 0 ? " bar negative" : "bar positive";
       })
       .attr("x", function (d) { 
-        return xScale(d.subreddit)/2; 
+        return xScale(d.subreddit); 
       })
       .attr("y", function(d) { 
         return yScale(Math.max(0, d.sum)); 
       })
-      .attr("width", xScale.rangeBand()/2)
+      .attr("width", xScale.rangeBand())
       .attr("height", function(d) { 
         return Math.abs(yScale(d.sum) - yScale(0)); 
       })
