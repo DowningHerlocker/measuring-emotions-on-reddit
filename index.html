@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+O<!DOCTYPE html>
 <meta charset="utf-8">
 <title> Subreddit Scores </title>
 <style>
@@ -15,19 +15,19 @@ body {
   shape-rendering: crispEdges;
 }
 .bar.negative {
-  fill: red;
+  fill: red  ;
 }
 .bar.positive {
-  fill: steelblue;
+  fill: #6699FF;
 }
 
 
 .bar.positive:hover {
-  fill: yellow ;
+  fill: #99CCFF ;
 }
 
-.bar.negative: hover {
-  fill: yellow;
+.bar.negative:hover {
+  fill: #CC6666 ;
 }
 .x.axis path {
   display: line;
@@ -67,7 +67,7 @@ body {
 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 <script>
 
-var margin = {top: 20, right: 20, bottom: 30, left: 40},
+var margin = {top: 40, right: 20, bottom: 30, left: 40},
   w = (window.innerWidth * 0.9) - margin.left - margin.right,
   h = (window.innerHeight * 0.9) - margin.top - margin.bottom;
 var padding = 25;
@@ -86,7 +86,7 @@ var tip = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-10, 0])
   .html(function(d) {
-    return d.subreddit  + " <strong>:</strong> <span style='color:red'>" + d.sum + "</span>";
+    return d.subreddit  + " <strong>:</strong> <span style='color:white'>" + d.sum + "</span>";
   })
 
 var svg = d3.select("body").append("svg")

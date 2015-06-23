@@ -18,16 +18,16 @@ body {
   fill: red;
 }
 .bar.positive {
-  fill: blue;
+  fill: #6699FF;
 }
 
 
 .bar.positive:hover {
-  fill: blue ;
+  fill: #99CCFF ;
 }
 
 .bar.negative:hover {
-  fill: red;
+  fill: #CC6666;
 }
 .x.axis path {
   display: line;
@@ -38,7 +38,7 @@ body {
   font-weight: bold;
   padding: 12px;
   background: rgba(0, 0, 0, 0.8);
-  color: #fff;
+  color: white;
   border-radius: 2px;
 }
 
@@ -67,10 +67,10 @@ body {
 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 <script>
 
-var margin = {top: 40, right: 20, bottom: 30, left: 40},
+var margin = {top: 40, right: 10, bottom: 20, left: 10},
   w = (window.innerWidth * 0.9) - margin.left - margin.right,
   h = (window.innerHeight * 0.9) - margin.top  - margin.bottom;
-var padding = .5;
+var padding = 100;
 //var formatPercent = d3.format(".0%");
 
 /*var xAxis = d3.svg.axis()
@@ -86,7 +86,7 @@ var tip = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-10, 0])
   .html(function(d) {
-    return d.title  + " <strong>:</strong> <span style='color:red'>" + d.sum + "</span>";
+    return d.title  + " <strong>:</strong> <span style='color:white'>" + d.sum + "</span>";
   })
 
 var svg = d3.select("body").append("svg")

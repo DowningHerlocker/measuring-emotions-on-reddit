@@ -18,16 +18,16 @@ body {
   fill: red;
 }
 .bar.positive {
-  fill: steelblue;
+  fill: #6699FF;
 }
 
 
 .bar.positive:hover {
-  fill: yellow ;
+  fill: #99CCFF ;
 }
 
 .bar.negative: hover {
-  fill: yellow;
+  fill: #CC6666;
 }
 .x.axis path {
   display: line;
@@ -85,7 +85,7 @@ var tip = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-10, 0])
   .html(function(d) {
-    return d.subreddit  + " <strong>:</strong> <span style='color:red'>" + d.sum + "</span>";
+    return d.subreddit  + " <strong>:</strong> <span style='color:white'>" + d.sum + "</span>";
   })
 
 var svg = d3.select("body").append("svg")
