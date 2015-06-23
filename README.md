@@ -10,10 +10,6 @@ npm i sentiment request
 #run
 ```
 node download.js > downloads.json
-```
-```
 node stats.js > subreddits.json
-```
-```
 serve
 ```
