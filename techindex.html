@@ -45,9 +45,10 @@ body {
 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 <script>
 
-var w = 600
-var h = 1200
-var padding = 200;
+var margin = {top: 40, right: 40, bottom: 40, left: 40},
+  w = (window.innerWidth * 0.9) - margin.left - margin.right,
+  h = (window.innerHeight * 0.9) - margin.top - margin.bottom;
+var padding = 150;
 //var formatPercent = d3.format(".0%");
 
 /*var xAxis = d3.svg.axis()
