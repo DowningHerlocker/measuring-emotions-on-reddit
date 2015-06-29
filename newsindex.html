@@ -67,8 +67,9 @@ body {
 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 <script>
 
-var w = 600
-var h = 400
+var margin = {top: 40, right: 40, bottom: 40, left: 40},
+  w = (window.innerWidth * 0.9) - margin.left - margin.right,
+  h = (window.innerHeight * 0.9) - margin.top - margin.bottom;
 var padding = 150;
 //var formatPercent = d3.format(".0%");
 
@@ -83,7 +84,7 @@ var padding = 150;
 
 var tip = d3.tip()
   .attr('class', 'd3-tip')
-  .offset([-10, 0])
+  .offset([-50, 0])
   .html(function(d) {
     return d.title  + " <strong>:</strong> <span style='color:white'>" + d.sum + "</span>";
   })
