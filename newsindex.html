@@ -69,7 +69,7 @@ var tip = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-50, 0])
   .html(function(d) {
-    return d.title  + " <strong>:</strong> <span style='color:white'>" + d.sum + "</span>";
+    return d.title  + " <strong>:</strong> <span style='color:black'>" + d.sum + "</span>";
   })
 
 var svg = d3.select("body").append("svg")
