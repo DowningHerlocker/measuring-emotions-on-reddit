@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title> Cat Dog Scores </title>
+<title> Subreddit Scores </title>
 <style>
 
 body {
@@ -26,7 +26,7 @@ body {
   fill: #99CCFF ;
 }
 
-.bar.negative: hover {
+.bar.negative:hover {
   fill: #CC6666;
 }
 .x.axis path {
@@ -67,9 +67,11 @@ body {
 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 <script>
 
-var w = 400;
-var h = 600;
 var padding = 25;
+var w = (window.innerWidth * 0.9) - padding - padding;
+var h = (window.innerHeight * 0.9) - padding- padding;
+
+
 //var formatPercent = d3.format(".0%");
 
 /*var xAxis = d3.svg.axis()
@@ -96,7 +98,7 @@ var svg = d3.select("body").append("svg")
 
 svg.call(tip);
 
-d3.json("catdogstats.json", function (error, subreddits) {
+d3.json("citystats.json", function (error, subreddits) {
   subreddits = subreddits.sort (function (a, b){
     return a.sum - b.sum
   })
@@ -121,12 +123,12 @@ d3.json("catdogstats.json", function (error, subreddits) {
         return d.sum < 0 ? " bar negative" : "bar positive";
       })
       .attr("x", function (d) { 
-        return xScale(d.subreddit)/2; 
+        return xScale(d.subreddit); 
       })
       .attr("y", function(d) { 
         return yScale(Math.max(0, d.sum)); 
       })
-      .attr("width", xScale.rangeBand()/2)
+      .attr("width", xScale.rangeBand())
       .attr("height", function(d) { 
         return Math.abs(yScale(d.sum) - yScale(0)); 
       })

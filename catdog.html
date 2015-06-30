@@ -14,19 +14,19 @@ body {
   stroke: #000;
   shape-rendering: crispEdges;
 }
-.bar.negative {
+.bar.cats {
   fill: red;
 }
-.bar.positive {
+.bar.dogs {
   fill: #6699FF;
 }
 
 
-.bar.positive:hover {
+.bar.dogs:hover {
   fill: #99CCFF ;
 }
 
-.bar.negative: hover {
+.bar.cats:hover {
   fill: #CC6666;
 }
 .x.axis path {
@@ -67,9 +67,11 @@ body {
 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 <script>
 
-var w = 400;
-var h = 600;
-var padding = 25;
+
+var padding = 50;
+var w = (window.innerWidth * 0.9) - padding - padding;
+var h = (window.innerHeight * 0.9) - padding- padding;
+
 //var formatPercent = d3.format(".0%");
 
 /*var xAxis = d3.svg.axis()
@@ -83,7 +85,7 @@ var padding = 25;
 
 var tip = d3.tip()
   .attr('class', 'd3-tip')
-  .offset([-10, 0])
+  .offset([-20, 0])
   .html(function(d) {
     return d.subreddit  + " <strong>:</strong> <span style='color:white'>" + d.sum + "</span>";
   })
@@ -96,7 +98,7 @@ var svg = d3.select("body").append("svg")
 
 svg.call(tip);
 
-d3.json("pstats.json", function (error, subreddits) {
+d3.json("catdogstats.json", function (error, subreddits) {
   subreddits = subreddits.sort (function (a, b){
     return a.sum - b.sum
   })
@@ -110,7 +112,7 @@ d3.json("pstats.json", function (error, subreddits) {
     .domain(d3.extent(subreddits, function(d){
       return d.sum;
     }))
-    .range([w+padding,padding]);
+    .range([h-padding,padding]);
 
 //deleted axes 
 //create barchart 
@@ -118,15 +120,19 @@ d3.json("pstats.json", function (error, subreddits) {
       .data(subreddits)
     .enter().append("rect")
       .attr("class", function (d) {
-        return d.sum < 0 ? " bar negative" : "bar positive";
+        if (d.subreddit === "dogs") {
+          return "bar dogs"
+        } else {
+          return "bar cats"
+        }
       })
       .attr("x", function (d) { 
-        return xScale(d.subreddit)/2; 
+        return xScale(d.subreddit); 
       })
       .attr("y", function(d) { 
         return yScale(Math.max(0, d.sum)); 
       })
-      .attr("width", xScale.rangeBand()/2)
+      .attr("width", xScale.rangeBand())
       .attr("height", function(d) { 
         return Math.abs(yScale(d.sum) - yScale(0)); 
       })
